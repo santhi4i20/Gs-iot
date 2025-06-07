@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 58.2, "left": -10.2, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -104.1, "left": -119.3, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -97.3, "left": 86.2, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -124.5, "left": 215.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "ultrasonic1:VCC", "uno:5V", "red", [ "v288", "h201.6" ] ],
+    [ "ultrasonic1:GND", "uno:GND.1", "black", [ "v48", "h123.6" ] ],
+    [ "ultrasonic1:TRIG", "uno:8", "green", [ "v57.6", "h201.2" ] ],
+    [ "ultrasonic1:ECHO", "uno:9", "green", [ "v48", "h181.6" ] ],
+    [ "dht1:VCC", "uno:5V", "red", [ "v57.6", "h105.6", "v230.4", "h-192" ] ],
+    [ "dht1:SDA", "uno:7", "green", [ "v48", "h-67.1" ] ],
+    [ "dht1:GND", "uno:GND.3", "black", [ "v278.4", "h-86.4" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v57.6", "h-202.4", "v259.2", "h220.8", "v9.6" ] ],
+    [ "pot1:GND", "uno:GND.2", "black", [ "v48", "h-201.6", "v288", "h249.6" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v57.6", "h162.8", "v259.2", "h-86.4" ] ]
+  ],
+  "dependencies": {}
+}
